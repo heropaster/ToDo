@@ -2,6 +2,9 @@
 const todosNode = document.querySelector('.js-todos');
 const inputNode = document.querySelector('.js-input');
 const buttonNode = document.querySelector('.js-button');
+
+const Enter_Key = 13;
+
 let todos = [];
 
 function addTodo(task) {
@@ -22,7 +25,6 @@ function deleteTodo(id) {
 }
 
 function render() {
-    console.log(todos);
     let html = '';
    
     todos.forEach(todo => {
@@ -39,17 +41,23 @@ function render() {
        todosNode.innerHTML = html;
     })
 }
-
-buttonNode.addEventListener('click', () => {
+document.getElementById('todo')
+    .addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keycode === Enter_Key) {
+            console.log('Enter')
+            document.getElementById("addTodo").click()
+        }
+    });
+function buttonClick() {
     const text = inputNode.value;
-    
     if(inputNode.value==0) {
         return;
     }
     addTodo(text);
 
     render();
-});
+}
 
 todosNode.addEventListener('click', (event) => {
     if (event.target.tagName !== 'BUTTON') {

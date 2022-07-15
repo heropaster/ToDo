@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>to-do</title>
+    <title>To-do App</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <h1>Tasks to do</h1>
-    <input type="text" name="todo" id="todo" class="js-input">
-    <button class="js-button">Add task</button>
-    <div class ="js-todos"> </div>
+    <div class="todoContainer">
+        <div class="totoapp">
+    <header>
+        <h1>Tasks to do</h1>
+    <input type="text" name="todo" id="todo" class="js-input" placeholder="What needs to do?">
+    <button class="js-button" id="addTodo" onclick="buttonClick()">Add task</button>
+    </header>
+        <div class ="js-todos"> </div>
+        </div>
+    </div>
     <script src="scripttodo.js"> </script>
 </body>
 </html>

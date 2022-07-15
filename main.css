@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+body {
+    min-width: 230px;
+    max-width:530px;
+    padding-left:320px;
+    margin: 0 auto;
+    font-family:"Josefin Sans", sans-serif;
+    color:#000;
+    font-size:16px;
+    background-color:#99B3B3;
+}
+a {
+    text-decoration: none;
+    color:#000;
+}
+h1, h2, h3, h4, h5, h6 {
+    padding:0;
+    margin:0;
+    text-transform: uppercase;
+}
+ul, li {
+    display:block;
+    padding:0px;
+    margin: 0px;
+}
+.todoContainer {
+    margin:140px 0 40px 0
+}
