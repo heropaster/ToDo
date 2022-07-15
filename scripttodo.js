@@ -41,10 +41,10 @@ function render() {
        todosNode.innerHTML = html;
     })
 }
-document.getElementById('todo')
+document.getElementById("todo")
     .addEventListener("keyup", function(event) {
         event.preventDefault();
-        if (event.keycode === Enter_Key) {
+        if (event.keyCode === Enter_Key) {
             console.log('Enter')
             document.getElementById("addTodo").click()
         }
@@ -65,7 +65,6 @@ todosNode.addEventListener('click', (event) => {
     }
 
     const id = event.target.dataset.id;
-
     deleteTodo(id);
 
     render(); 
